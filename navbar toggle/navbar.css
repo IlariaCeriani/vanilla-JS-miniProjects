@@ -1,0 +1,117 @@
+*,*::before,*::after {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Spartan', sans-serif;
+    margin: 0;
+}
+
+nav {
+    width: 100vw;
+    background-color: chartreuse;
+    box-shadow: 0px 3px 7px hsla(0, 0%, 0%, .4);
+}
+.center-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+h3 {
+    margin-left: 1em;
+}
+.menu-btn {
+    max-width: 2em;
+    max-height: 2em;
+    margin-right: 1em;
+
+}
+
+.links {
+    list-style-type: none;
+    padding-left: 0;
+    margin-block: 0;
+    display: flex;
+    flex-direction: column;
+    height: 0;
+    overflow: hidden;
+}
+.show-links {
+    height: 178.375px;
+}
+.link-li {
+    padding-block: .8em;
+    padding-left: 2em;
+    transition: transform 150ms ease-in-out;
+}
+.link-li:hover {
+    transform: translateX(20px);
+}
+.link-a {
+    text-decoration: none;
+    color: black;
+    transition: background-color 150ms ease-in-out;
+}
+.link-a:hover {
+    background-color: hsl(90, 100%, 60%);
+}
+.contact-list {
+    display: none;
+}
+
+@media screen and (min-width: 750px) {
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+    .center-div {
+        flex-basis: 25%;
+        display: block;
+        width: auto;
+    }
+    .menu-btn {
+        display: none;
+    }
+    
+    .links {
+        flex-basis: 50%;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .link-li {
+        padding-block: 0;
+        padding-left: 0;
+        font-weight: bolder;
+    }
+    .link-li:hover {
+        transform: initial;
+    }
+    .link-a:hover {
+        background-color: initial;
+        outline: 2px solid black;
+        outline-offset: .5em;
+    }
+    
+    .contact-list {
+        flex-basis: 25%;
+        display: flex;
+        list-style-type: none;
+        justify-content: flex-end;
+    }
+    .contact-item {
+        margin-inline: 1em;
+    }
+    .contact-icon {
+       width: 1.5em;
+       height: 1.5em;
+       transition: 150ms ease-in-out;
+    }
+    .contact-icon:hover {
+        transform: scale(1.2);
+    }
+
+}
+
+

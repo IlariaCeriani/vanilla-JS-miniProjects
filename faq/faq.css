@@ -1,0 +1,83 @@
+*, *::before, *::after {
+    box-sizing:border-box;
+}
+body {
+   font-family: 'Zen Antique Soft', serif; 
+   margin: 0;
+   display: flex;
+   justify-content:center;
+   align-items: center;
+}
+.container {
+    width: 40vw;
+    margin-block: 2em;
+}
+h2 {
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    color: chocolate;
+    font-weight: bolder;
+}
+.questions {
+    margin-top: 2em;
+}
+.question {
+    background-color: cornsilk;
+    margin-block: 1em;
+    box-shadow: 0px 0px 5px hsla(48, 100%, 13%, .4);
+    padding: .3em 3em .8em 3em;
+    border-radius: 5px;
+    position: relative;
+}
+
+h4 {
+    margin-block: .5em;
+}
+.btn  {
+    display: inline-block;
+    position: absolute;
+    top: 15px;
+    right: 2em;
+    padding: 0;
+    border: none;
+    background: transparent;
+}
+.btn-plus:hover {
+    cursor: pointer;
+    animation-name: btn-plus;
+    animation-duration: 600ms;
+}
+@keyframes btn-plus {
+    from {transform: rotate(0deg);}
+    to { transform: rotate(180deg);}
+}
+.btn-minus:hover {
+    cursor: pointer;
+    animation-name: btn-plus;
+    animation-duration: 600ms;
+}
+@keyframes btn-plus {
+    from {transform: rotate(0deg);}
+    to { transform: rotate(-180deg);}
+}
+.icon {
+    font-size: 1.5rem;
+    color: chocolate;
+}
+.text {
+    padding-top: 1em;
+
+    display: none;
+}
+.btn-minus {
+    display: none;
+}
+.text-show .text {
+    display: initial;
+}
+.text-show .btn-minus {
+    display: initial;
+}
+.text-show .btn-plus {
+    display: none;
+}
