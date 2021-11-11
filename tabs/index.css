@@ -70,3 +70,26 @@ img {
     padding-inline: 1em;
     line-height: 1.6;
 }
+
+@media (max-width: 1220px) {
+    main {
+        justify-content: center;
+    }
+    .img-cotnainer,
+    .tab-container {
+        flex-basis: 100%;
+    }
+    .img-container {
+        margin-right: 0;
+        margin-bottom: 2em;
+    }
+    img {
+        width: 70vw;
+        height: 40vh;
+        margin-bottom: 3em;
+    }
+    .tab-container {
+        width: 80vw;
+        margin-left: 0;
+    }
+}
