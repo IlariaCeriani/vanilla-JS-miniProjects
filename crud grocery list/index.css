@@ -1,0 +1,7 @@
+*, *::before, * ::after {
+    box-sizing: border-box;
+}
+
+body, .clear-btn, .submit-btn, input {
+    font-family: 'Amatic SC', cursive;
+}
