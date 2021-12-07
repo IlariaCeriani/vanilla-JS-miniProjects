@@ -18,29 +18,63 @@ body {
     padding: 2em;
     border-radius: 10px;
     color: whitesmoke;
+    position: relative;
+}
+
+.alert {
+    display: block;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-block: 0;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    right: 0;
+}
+.alert-danger {
+    color: crimson;
+    background-color: hsla(348, 82%, 80%, 0.801);
+}
+.alert-success {
+    color:darkgreen;
+    background-color: hsla(120, 100%, 80%, 0.836);
 }
 
 h1 {
     font-size: 3rem;
     font-weight: bold;
     text-align: center;
+    margin-top: 0;
 }
 
 input, .submit-btn {
     font-size: 1.5rem;
 }
+.form-control {
+    display: flex;
+    justify-content: center;
+}
+input {
+    border: 1px solid white;
+}
 .submit-btn {
-    border: 1px solid hsl(84, 100%, 69%);
-    border-radius: 2px;
+    border: 2px solid greenyellow;
+    border-radius: 0px 5px 5px 0px;
     color: black;
     font-weight: bold;
     background-color: greenyellow;
 }
+.submit-btn:hover {
+    background-color: hsl(84, 100%, 39%);
+    border-color: hsl(84, 100%, 39%);
+}
 
 .grocery-container {
-    display: flex;
-    flex-direction: column;
     display: none;
+}
+.show-container {
+    display: initial;
 }
 
 .grocery-item {
@@ -75,6 +109,9 @@ input, .submit-btn {
     border-radius: 5px;
     color: whitesmoke;
     padding-block: .3em;
+    display: block;
+    position: relative;
+    margin-inline: auto;
 }
 
 button:hover {
