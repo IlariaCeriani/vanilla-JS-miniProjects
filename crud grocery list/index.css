@@ -6,19 +6,28 @@ body, .clear-btn, .submit-btn, input {
     font-family: 'Amatic SC', cursive;
 }
 body {
+    height: 97.4vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    background-image: url('./tropical.jpg');
+    background-image: url('./grocery.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .section-center {
+    width: 80%;
     background-color: hsla(0, 0%, 13%, 0.856);
     padding: 2em;
     border-radius: 10px;
     color: whitesmoke;
     position: relative;
+}
+@media screen and (min-width: 900px) {
+    .section-center {
+        width: 60%;
+    }
 }
 
 .alert {
@@ -89,6 +98,7 @@ input {
     font-weight: bold;
     font-size: 1.3rem;
 }
+
 .edit-btn, .delete-btn {
     border: none;
     padding: .6em;
@@ -119,4 +129,16 @@ button:hover {
 }
 .clear-btn:hover {
     background-color: hsl(0, 46%, 12%);
+}
+
+@media screen and (min-width: 900px) {
+    .grocery-item p {
+        font-size: 2rem;
+    }
+    .edit-btn, .delete-btn {
+        font-size: 1.2rem;
+    }
+    .clear-btn {
+        font-size: 1.6rem;
+    }
 }
