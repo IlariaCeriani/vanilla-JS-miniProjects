@@ -5,3 +5,81 @@
 body, .clear-btn, .submit-btn, input {
     font-family: 'Amatic SC', cursive;
 }
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./tropical.jpg');
+}
+
+.section-center {
+    background-color: hsla(0, 0%, 13%, 0.856);
+    padding: 2em;
+    border-radius: 10px;
+    color: whitesmoke;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+input, .submit-btn {
+    font-size: 1.5rem;
+}
+.submit-btn {
+    border: 1px solid hsl(84, 100%, 69%);
+    border-radius: 2px;
+    color: black;
+    font-weight: bold;
+    background-color: greenyellow;
+}
+
+.grocery-container {
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+
+.grocery-item {
+    margin-block: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid whitesmoke;
+}
+
+.grocery-item p {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+.edit-btn, .delete-btn {
+    border: none;
+    padding: .6em;
+    background-color: transparent;
+}
+.edit-btn {
+    color: orange;
+}
+.delete-btn {
+    color: red;
+}
+
+.clear-btn {
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: #212121;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+    color: whitesmoke;
+    padding-block: .3em;
+}
+
+button:hover {
+    cursor: pointer;
+}
+.clear-btn:hover {
+    background-color: hsl(0, 46%, 12%);
+}
