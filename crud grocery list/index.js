@@ -26,7 +26,7 @@ window.addEventListener('DOMContentLoaded', setupItems);
 function addItem(e) {
     e.preventDefault();
     const value = grocery.value;
-    // on a serious project you wouldnt use the new date approach, we're just using it to great some sort of id for an element
+    // on a serious project you wouldnt use the new date approach, we're just using it to create some sort of id for an element
     const id = new Date().getTime().toString();
     if(value && !editFlag) {
         createListItem(id, value);
