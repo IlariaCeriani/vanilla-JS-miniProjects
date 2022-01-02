@@ -8,15 +8,16 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <header></header>
-    <main class="main-container">
+    <header>
         <form class="form">
-            <label for="city-name">City:</label><input type="text" placeholder="e.g. Dublin" name="city-name" id="city-name" required>
+            <label for="city-name">Find breweries in your favorite city!</label>
+            <legend>(Only available for Ireland, UK and USA)</legend>
+            <input type="text" placeholder="e.g. Dublin" name="city-name" id="city-name" required>
             <button type="submit">Search</button>
         </form>
+    </header>
+    <main class="main-container">
         <section class="brewery-container"></section>
-        
-
     </main>
 
     <script src="idex.js"></script>

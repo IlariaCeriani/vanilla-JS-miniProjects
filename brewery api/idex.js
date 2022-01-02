@@ -31,11 +31,19 @@ async function getData(city){
         }
     });
     obj = obj.map((item)=> {
-        return `<article class="brewery-item">
+        if (item.longitude && item.latitude) {
+            return `<article class="brewery-item">
+            <h3 class="brewery-title">${item.name}</h3>
+            <p class="brewery-street">${item.street}</p>
+            <a href="${item.website_url}" target="_blank" class="brewery-link">${item.website_url}</a>
+            <a href="http://www.google.com/maps/place/${item.latitude},${item.longitude}" target="_blank" class="brewery-map">see map</a>
+            </article>`
+        } 
+        else {return `<article class="brewery-item">
         <h3 class="brewery-title">${item.name}</h3>
         <p class="brewery-street">${item.street}</p>
         <a href="${item.website_url}" target="_blank" class="brewery-link">${item.website_url}</a>
-        </article>`
+        </article>`}
     }).join('');
     container.innerHTML = obj;
 }
