@@ -8,17 +8,11 @@ html {
 body {
     font-family: 'Source Serif Pro', serif;
     margin: 0;
-    /* background-image: url('floor2.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-color: #000000;
-    background-blend-mode: soft-light; */
     background-color: hsl(263, 64%, 4%);
     color: whitesmoke;
 }
 
-label, input, button {
+label, input, button, .brewery-title, .brewery-link {
     font-family: 'Josefin Sans', sans-serif;
 }
 
@@ -49,6 +43,7 @@ header {
 .form label {
     font-size: 2.5rem;
     text-shadow: 0px 0px 5px black;
+    text-shadow: 0px 0px 10px black;
 }
 .form legend {
     margin-block: .5em;
@@ -74,4 +69,48 @@ header {
     cursor: pointer;
     background-color: yellow;
     color: black;
+}
+
+/**RESULTS***/
+
+.brewery-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.brewery-item {
+    width: 90%;
+    margin-block: .5em;
+    border: 3px solid whitesmoke;
+    padding-inline: 1em;
+    padding-bottom: 1em;
+    letter-spacing: 1px;
+}
+
+a {
+    color: whitesmoke;
+}
+
+.brewery-link {
+    display: block;
+}
+
+.brewery-map {
+    font-family: initial;
+    margin-left: 1em;
+}
+
+@media screen and (min-width: 700px) and (max-width: 850px) {
+    .brewery-item {
+        width: 70%;
+    }
+}
+@media screen and (min-width: 851px) {
+    .brewery-item {
+        width: 50%;
+        margin-block: 1em;
+        letter-spacing: 2px;
+    }
 }
